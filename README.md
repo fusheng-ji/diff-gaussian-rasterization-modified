@@ -5,6 +5,11 @@
 
 **NOTE**: this is a modified version to support **Depth** & **Alpha** & **ObjectID** rendering (both forward and backward) from the [original repository](https://github.com/graphdeco-inria/diff-gaussian-rasterization). 
 
+```
+git clone --recursive https://github.com/fusheng-ji/diff-gaussian-rasterization-modified.git
+cd diff-gaussian-rasterization-modified
+pip install .
+```
 ```python
 rendered_image, radii, rendered_depth, rendered_alpha, rendered_objects = rasterizer(
     means3D=means3D,
