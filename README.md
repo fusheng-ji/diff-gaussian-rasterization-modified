@@ -3,6 +3,21 @@
 - Spherical harmonics match e3nn now.
 - Allow output semantic lable and depth
 
+**NOTE**: this is a modified version to support **Depth** & **Alpha** & **ObjectID** rendering (both forward and backward) from the [original repository](https://github.com/graphdeco-inria/diff-gaussian-rasterization). 
+
+```python
+rendered_image, radii, rendered_depth, rendered_alpha, rendered_objects = rasterizer(
+    means3D=means3D,
+    means2D=means2D,
+    shs=shs,
+    sh_objs = sh_objs,
+    colors_precomp=colors_precomp,
+    opacities=opacity,
+    scales=scales,
+    rotations=rotations,
+    cov3D_precomp=cov3D_precomp,
+)
+```
 # Differential Gaussian Rasterization
 
 Used as the rasterization engine for the paper "3D Gaussian Splatting for Real-Time Rendering of Radiance Fields". If you can make use of it in your own research, please be so kind to cite us.
